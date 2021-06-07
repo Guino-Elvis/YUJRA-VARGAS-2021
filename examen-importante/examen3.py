@@ -8,13 +8,13 @@ def examen3():
   #proceso
   if añosGYV>=70:
     resultadoGYV="se le aplica la vacuna tipo C"
-  if añosMLOA>16 and añosMLOA<=69:
-     sexoMLOA=input("ingresar sexo:") 
+  if añosGYV>16 and añosMLOA<=69:
+     sexoGYV=input("ingresar sexo:") 
      if sexoGYV=="hombre":
        resultadoGYV="se le aplica la vacuna A"
-     if sexoMLOA=="mujer":
+     if sexoGYV=="mujer":
        resultadoGYV="se le aplica la vacuna B"
-  if añosMLOA<=16:
+  if añosGYV<=16:
     resultadoGYV="se le aplica la vacuna tipo A"
   #datos de salida
   print("A la persona:",resultadoGYV)
