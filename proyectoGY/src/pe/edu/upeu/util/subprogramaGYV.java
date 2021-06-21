@@ -1,4 +1,4 @@
-package pe.edu.upeu.util;
+package src.pe.edu.upeu.util;
 
 import java.util.Scanner;
 
@@ -39,3 +39,4 @@ public class subprogramaGYV {
     }
 }
 
+ 

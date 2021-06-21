@@ -1,4 +1,4 @@
-package pe.edu.upeu;
+package src.pe.edu.upeu;
 
 import java.util.Scanner;
 
