@@ -6,9 +6,9 @@ package pe.edu.upeu.geyv.examengeyv;
 import java.util.Scanner;
 
 
-class examen4GEYV{
+ public class examen4GEYV{
   
-  public static void main(String[] arg){
+  public void numeroperfecto() {
     
 
     Scanner teclado =new Scanner(System.in);
@@ -43,9 +43,9 @@ class examen4GEYV{
    return boo1;
 
   }
+  
 
-public void isPerfect() {
-}
+
 }
 
   

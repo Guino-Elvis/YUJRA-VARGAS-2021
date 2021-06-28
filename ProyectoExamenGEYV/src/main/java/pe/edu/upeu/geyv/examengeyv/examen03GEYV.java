@@ -5,8 +5,9 @@ import java.util.Scanner;
 /**
  * examen3GEYV
  */
-class examen03GEYV{
-    public static void main(String[] arg){
+public class examen03GEYV{
+
+    public void isPerfect() {
       //definicion de variables u otros
       Scanner teclado =new Scanner(System.in);
       boolean comprobar = true;
@@ -43,6 +44,7 @@ class examen03GEYV{
 }
 }
 
-    public void isPerfect() {
+    
+      
     }
-}
+

@@ -1,0 +1,3 @@
+C1	frutas
+C2	verduras
+
