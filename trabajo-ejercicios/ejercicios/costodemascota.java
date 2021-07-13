@@ -1,3 +1,4 @@
+package ejercicios;
 import java.util.Scanner;
 class costodemascota{
 static Scanner teclado=new Scanner(System.in);
