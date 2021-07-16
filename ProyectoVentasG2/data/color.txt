@@ -1,0 +1,2 @@
+C1	AZUL
+C2	NEGRO
