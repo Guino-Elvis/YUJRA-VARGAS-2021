@@ -28,7 +28,7 @@ public class ProductoDao extends AppCrud {
         prodTO.setUnidadMed(lte.leer("", "Ingrese Unidad medida:"));
         prodTO.setPorceUtil(lte.leer(0.0, "Ingrese el porcentaje de utilidad:"));      
         prodTO.setPrecioUnit(lte.leer(0.0, "Ingrese Precio Unitario:"));
-        prodTO.setIdCateg(lte.leer("", "Ingrese color:"));
+        colTO.setIdCol(lte.leer("", "Ingrese color:"));
         prodTO.setStock(lte.leer(0.0, "Ingrese el stock:"));
         lar=new LeerArchivo("Producto.txt");     
         return agregarContenido(lar, prodTO);

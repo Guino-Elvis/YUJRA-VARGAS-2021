@@ -1,11 +1,4 @@
-U1	juan mestas	null	12345678
-U2	raul aliaga	null	1234562
-U3	frank choquehuanca	null	1234581
-U4	guino yujra	null	12345678
-U5	null	null	12345268
-U6	jose lopez	null	12345124
-U7	s	null	45
-U8	messi	null	12345678
-U9	fernando vargas canavaro	null	14523698
-U10	paolo gerrero lopez	null	1234521
-U11	pepe vasques	null	12345621
+12345678	PEPE 
+45123547	JUAN LOPEZ 
+12345879	JUANES
+123456	MESSI

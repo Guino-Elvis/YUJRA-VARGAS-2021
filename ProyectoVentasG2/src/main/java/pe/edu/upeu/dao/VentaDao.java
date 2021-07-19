@@ -5,6 +5,7 @@ import java.util.Date;
 
 import pe.edu.upeu.data.AppCrud;
 import pe.edu.upeu.modelo.ProductoTO;
+import pe.edu.upeu.modelo.ColorTO;
 import pe.edu.upeu.modelo.VentaDetalleTO;
 import pe.edu.upeu.modelo.VentaTO;
 import pe.edu.upeu.util.LeerArchivo;
@@ -33,6 +34,8 @@ public class VentaDao extends AppCrud{
     ProductoTO proTo;
     VentaTO ventTO;
     VentaDetalleTO vdTO;
+    ClienteDAO cli;
+    ColorDAO colTO;
     SimpleDateFormat formato=new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
     SimpleDateFormat formatoFecha=new SimpleDateFormat("dd-MM-yyyy"); 
 
@@ -65,7 +68,7 @@ public class VentaDao extends AppCrud{
         lar=new LeerArchivo("Venta.txt");
         ventTO=new VentaTO();
         ventTO.setIdVenta(generarId(lar, 0, "V", 1));
-        ventTO.setDniCliente(lte.leer("", "Ingrese el DNI del cliente:"));
+        ventTO.setDniCliente(retornarCliente(lte.leer("", "Ingrese el DNI del cliente:")));
         ventTO.setFechaVenta(formato.format(new Date()));
         ventTO.setIgv(0.0);
         ventTO.setNetoTotal(0.0);
@@ -74,6 +77,48 @@ public class VentaDao extends AppCrud{
         agregarContenido(lar, ventTO);
         return ventTO;
     }
+     
+          public String retornarCliente(String DNI) {
+
+            vdTO=new VentaDetalleTO();
+            lar=new LeerArchivo("Cliente.txt");
+
+            Object  cliente[][]= buscarContenido(lar, 0,DNI);
+
+            if(cliente!=null && cliente.length>0){
+              
+
+                return DNI;
+
+            }else{
+                cli=new ClienteDAO();
+                cli.RegistrarCliente();
+
+                return DNI;
+            }
+        }
+    
+        public String retornarColor(String color) {
+
+            vdTO=new VentaDetalleTO();
+            lar=new LeerArchivo("color.txt");
+
+            Object  Color[][]= buscarContenido(lar, 0,color);
+
+            if(Color!=null && Color.length>0){
+              
+
+                return color;
+
+            }else{
+                colTO=new ColorDAO();
+                colTO.registrarColor();
+
+                return color;
+            }
+        }
+
+          
 
     public VentaDetalleTO carritoVentas(VentaTO vTO) {
         mostrarProductos();
@@ -100,6 +145,7 @@ public class VentaDao extends AppCrud{
         ut.clearConsole();
         System.out.println("*******Agregar Productos a carrito de ventas******");
         lar=new LeerArchivo("Producto.txt");
+        
         Object[][] data=listarContenido(lar);
         for (int i = 0; i < data.length; i++) {
             if(Double.parseDouble(String.valueOf(data[i][6]))>0){
