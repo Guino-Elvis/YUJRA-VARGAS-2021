@@ -2,14 +2,14 @@ package pe.edu.upeu.app;
 
 import java.io.Console;
 
-import pe.edu.upeu.dao.CategoriaDao;
-import pe.edu.upeu.dao.ClienteDAO;
-import pe.edu.upeu.dao.ProductoDao;
-import pe.edu.upeu.dao.UsuarioDao;
-import pe.edu.upeu.dao.VentaDao;
+import pe.edu.upeu.dao.CategoriaSansung;
+import pe.edu.upeu.dao.ClienteSansung;
+import pe.edu.upeu.dao.ProductoDeSansung;
+import pe.edu.upeu.dao.UsuarioDeSansung;
+import pe.edu.upeu.dao.VentaDeSansung;
 import pe.edu.upeu.gui.MainGUI;
-import pe.edu.upeu.dao.ColorDAO;
-import pe.edu.upeu.dao.ModeloDAO;
+import pe.edu.upeu.dao.ColorDeCelularSansung;
+import pe.edu.upeu.dao.ModeloDeSansung;
 
 import pe.edu.upeu.modelo.CategoriaTO;
 import pe.edu.upeu.modelo.ProductoTO;
@@ -45,31 +45,31 @@ public class App {
         "\n0=Salir del programa";
         LeerTeclado lt=new LeerTeclado(); 
         UtilsX ut=new UtilsX();
-        CategoriaDao daoC;       
-        UsuarioDao daoUso;
-        ProductoDao proDao;
-        ColorDAO colTO;
-        VentaDao venDao;
-        ModeloDAO modTO;
-         ClienteDAO cliDAO;
+        CategoriaSansung daoC;       
+        UsuarioDeSansung daoUso;
+        ProductoDeSansung proDao;
+        ColorDeCelularSansung colTO;
+        VentaDeSansung venDao;
+        ModeloDeSansung modTO;
+         ClienteSansung cliDAO;
         int opcion=0;
         opcion=lt.leer(0, mensaje);
         do{            
             switch(opcion){
                 case 1:                
-                daoC=new CategoriaDao(); daoC.crearCategoria(); 
+                daoC=new CategoriaSansung(); daoC.crearCategoria(); 
                 ut.clearConsole(); break;
                 case 2: 
                 ut.clearConsole();
-                daoC=new CategoriaDao(); daoC.reporteCategoria(); break;    
-                case 3: proDao=new ProductoDao(); proDao.crearProducto(); break;
-                case 4: proDao=new ProductoDao(); proDao.reporteProducto(); break;
-                case 5: venDao=new VentaDao(); venDao.registroVentaGeneral(); break;
-                case 6: venDao=new VentaDao(); venDao.reporteVentasRangoFecha(); break;
-                case 7: colTO=new ColorDAO(); colTO.registrarColor(); break;
-                case 8: daoUso=new UsuarioDao(); daoUso.crearNuevoUsuario(); break;
-                case 9: modTO=new ModeloDAO(); modTO.registrarModelo(); break;
-                case 10: cliDAO=new ClienteDAO(); cliDAO.RegistrarCliente(); break;
+                daoC=new CategoriaSansung(); daoC.reporteCategoria(); break;    
+                case 3: proDao=new ProductoDeSansung(); proDao.crearProducto(); break;
+                case 4: proDao=new ProductoDeSansung(); proDao.reporteProducto(); break;
+                case 5: venDao=new VentaDeSansung(); venDao.registroVentaGeneral(); break;
+                case 6: venDao=new VentaDeSansung(); venDao.reporteVentasRangoFecha(); break;
+                case 7: colTO=new ColorDeCelularSansung(); colTO.registrarColor(); break;
+                case 8: daoUso=new UsuarioDeSansung(); daoUso.crearNuevoUsuario(); break;
+                case 9: modTO=new ModeloDeSansung(); modTO.registrarModelo(); break;
+                case 10: cliDAO=new ClienteSansung(); cliDAO.RegistrarCliente(); break;
                 case 11: break;
                 
                 default: System.out.println("La opcion que eligio no exuiste!");
@@ -92,7 +92,7 @@ public class App {
         String usuario=lt.leer("", "Ingrese su usuario:");
         System.out.println("Ingrese su clave:");
         char[] clave=constx.readPassword();
-        UsuarioDao usuDao=new UsuarioDao();
+        UsuarioDeSansung usuDao=new UsuarioDeSansung();
         if(usuDao.login(usuario, clave)){
             menuMain(); 
         }else{
