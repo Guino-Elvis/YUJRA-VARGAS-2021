@@ -2,3 +2,4 @@ V1	12345678	15-07-2021 14:17:08	0.0	0.0	0.0
 V2	12345678	15-07-2021 14:53:04	105.93220338983052	19.06779661016949	125.0
 V3	12345785	15-07-2021 14:58:07	0.0	0.0	0.0
 V4	12345678	16-07-2021 13:25:04	0.0	0.0	0.0
+V5	 d:; cd 'd:\CLON -2021\YUJRA-VARGAS-2021\ProyectoVentasG2'; & 'c:\Users\PC-5\.vscode\extensions\vscjava.vscode-java-debug-0.34.0\scripts\launcher.bat' 'C:\Program Files\Java\jdk-16.0.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-Dfile.encoding=UTF-8' '@C:\Users\PC-5\AppData\Local\Temp\cp_cr2h7gtuvz7talb9vkwhta5c7.argfile' 'pe.edu.upeu.app.App' 	18-07-2021 21:20:48	0.0	0.0	0.0

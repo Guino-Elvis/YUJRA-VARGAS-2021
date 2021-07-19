@@ -27,7 +27,7 @@ public class CategoriaDao extends AppCrud {
 
         catTO.setNombre(lte.leer("", "Ingrese nombre de categoria:"));  
         colTO.setIdCol(generarId(lar, 0, "X", 1)); 
-        colTO.setNombre(lte.leer("", "Ingrese color:"));      
+        colTO.setColor(lte.leer("", "Ingrese color:"));      
         return agregarContenido(lar, catTO);
     }
     

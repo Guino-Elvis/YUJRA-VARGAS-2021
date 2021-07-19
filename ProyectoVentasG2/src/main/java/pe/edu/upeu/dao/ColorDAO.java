@@ -18,20 +18,17 @@ public class ColorDAO extends AppCrud{
     public void registrarColor() {
         colTO=new ColorTO();
         lar=new LeerArchivo("color.txt");
-        colTO.setIdCol(generarId(lar, 0, "C", 1)); 
-        colTO.setNombre(tre.leer("", "Ingrese nombre categoria:"));
+        colTO.setIdCol(generarId(lar, 0, "C00", 1)); 
+        colTO.setColor(tre.leer("", "Ingrese nombre categoria:"));
         agregarContenido(lar, colTO);
     }
 
-    public void reporteColor() {
-        lar=new LeerArchivo("Color.txt");
-        imprimirLista(listarContenido(lar));
-    }
+   
     public void editar(){
         lar=new LeerArchivo("Color.txt");
           colTO=new ColorTO();
           
-          colTO.setNombre(tre.leer("","INGRESE EL COLOR"));
+          colTO.setColor(tre.leer("","INGRESE EL COLOR"));
           editarRegistro(lar, 0, colTO.getIdCol(), colTO);
     }
 
