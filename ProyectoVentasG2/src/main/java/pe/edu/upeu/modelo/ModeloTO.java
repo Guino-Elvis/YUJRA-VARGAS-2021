@@ -16,6 +16,7 @@ public void setIdmod(String idmod) {
     this.idmod = idmod;
 }
 
+
 public String getModelo() {
     return Modelo;
 }

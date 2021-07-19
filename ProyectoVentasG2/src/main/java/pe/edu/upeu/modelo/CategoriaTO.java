@@ -11,6 +11,7 @@ public class CategoriaTO {
         this.idCateg = idCateg;
     }
     
+    
     public String getNombre() {
         return nombre;
     }

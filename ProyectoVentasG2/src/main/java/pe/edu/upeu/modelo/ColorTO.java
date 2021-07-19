@@ -16,6 +16,8 @@ public class ColorTO {
         this.idCol = idCol;
     }
     
+
+    
     public String getColor() {
         return color;
     }

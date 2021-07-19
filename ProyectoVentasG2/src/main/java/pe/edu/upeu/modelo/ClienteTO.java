@@ -6,3 +6,4 @@ import lombok.Data;
 public class ClienteTO {    
     public String DNI, Cliente;
 }
+

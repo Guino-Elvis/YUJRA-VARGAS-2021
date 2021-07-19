@@ -6,3 +6,4 @@ import lombok.Data;
 public class UsuarioTO {    
     public String idUsuario, usuario, clave, perfil;
 }
+
