@@ -108,13 +108,13 @@ public class App {
     
 
     public static void main( String[] args ){
-        AnsiConsole.systemInstall();
-        Ansi colorX=new Ansi();
-        System.out.println(colorX.bgBrightGreen().fgBlue().a("***************Ingreso al Sistema***********").reset());
-        AnsiConsole.systemInstall();
-        System.out.println(colorX.render("@|red Hello|@ gggg @|green World|@") );
-        validarAcceso();     
-        menuMain(); 
-        new MainGUI();
+       // AnsiConsole.systemInstall();
+      //  Ansi colorX=new Ansi();
+       // System.out.println(colorX.bgBrightGreen().fgBlue().a("***************Ingreso al Sistema***********").reset());
+       // AnsiConsole.systemInstall();
+      //  System.out.println(colorX.render("@|red Hello|@ gggg @|green World|@") );
+       validarAcceso();     
+        //menuMain(); 
+        //new MainGUI();
     }
 }
